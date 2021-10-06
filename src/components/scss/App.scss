@@ -1,0 +1,34 @@
+@use 'resets';
+@use 'variables';
+@use 'Header';
+
+.App{
+  min-height: 150vh; // TODO DELETE THIS
+
+  background-color: var(--background);
+  font-family: var(--main-font);
+  color: var(--text-main-color);
+
+  transition: background-color 150ms ease;
+}
+
+.red-hi{
+  color: var(--red);
+}
+
+.green-hi{
+  color: var(--green);
+}
+
+.orange-hi{
+  color: var(--orange);
+}
+
+.highlight{
+  color: var(--highlight-clr);
+}
+
+.active{
+  visibility: visible;
+  transform: scaleY(1);
+}

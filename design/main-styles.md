@@ -29,10 +29,10 @@
 
   - accent color [green highlight]: hsl(80, 83%, 57%)
   - accent color [key text, pink]: hsl(338, 95%, 56%)
-  - accent color [cyan highlight]: hsl(190, 81%, 67%)
+  <!-- - accent color [cyan highlight]: hsl(190, 81%, 67%) -->
   - accent color [orange highlight]: hsl(32, 98%, 56%)
-  - accent color [yellow highlight]: hsl(54, 70%, 68%)
-  - accent color [violet highlight]: hsl(261, 100%, 75%)
+  <!-- - accent color [yellow highlight]: hsl(54, 70%, 68%) -->
+  <!-- - accent color [violet highlight]: hsl(261, 100%, 75%) -->
 
 ### Light Mode 🌞
   - Background [greyish white]: hsl(0, 0%, 98%)
@@ -43,8 +43,8 @@
   - Low contrast text [light grey]: hsl(230, 4%, 64%)
 
   - accent color [blue highlight]: hsl(221, 87%, 60%)
-  - accent color [key text, violet]: hsl(301, 63%, 40%) 
-  - accent color [violet highlight]:  hsl(301, 63%, 40%)
+  <!-- - accent color [key text, violet]: hsl(301, 63%, 40%)  -->
+  <!-- - accent color [violet highlight]:  hsl(301, 63%, 40%) -->
   - accent color [red1 highlight]: hsl(5, 74%, 59%)
   - accent color [green highlight]: hsl(119, 34%, 47%)
   - accent color [orange highlight]: hsl(41, 99%, 30%)

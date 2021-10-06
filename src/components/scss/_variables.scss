@@ -1,0 +1,40 @@
+:root{
+  --main-font: 'Saira', sans-serif;
+  --accent-font: 'Fira Code', monospace;
+  
+  --header-spacing: 1.5em;
+
+  .dark-theme {
+    --background: hsl(0, 0%, 11%);
+    --elements-bg: hsl(240, 1%, 15%);
+
+    --text-main-color: hsl(207, 10%, 90%);
+    --text-lc-color: hsl(207, 10%, 40%);
+
+    --green: hsl(80, 83%, 57%);
+    --red: hsl(338, 95%, 56%);
+    --orange: hsl(32, 98%, 56%);
+
+    --highlight-clr: hsl(338, 95%, 56%);
+
+    --shadow: 2px 4px 4px hsl(0deg 0% 9% / 15%),
+    6px 12px 12px hsl(0deg 0% 9% / 10%);
+  }
+
+  .light-theme {
+    --background: hsl(0, 0%, 98%);
+    --elements-bg: hsl(0, 0%, 95%);
+
+    --text-main-color: hsl(230, 8%, 24%);
+    --text-lc-color: hsl(230, 4%, 64%);
+
+    --green: hsl(119, 34%, 47%);
+    --red: hsl(5, 74%, 59%);
+    --orange: hsl(41, 99%, 30%);
+
+    --highlight-clr: hsl(221, 87%, 60%);
+
+    --shadow: 2px 4px 4px hsl(0deg 0% 92% / 15%),
+    6px 12px 12px hsl(0deg 0% 92% / 10%);
+  }
+}
