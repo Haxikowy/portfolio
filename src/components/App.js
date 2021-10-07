@@ -4,6 +4,7 @@ import { Router, Switch, Route } from 'react-router';
 import history from '../history';
 import Header from './Header';
 import Home from './Home';
+import Footer from './Footer';
 
 const App = () => {
   const [theme, setTheme] = useState(false);
@@ -19,11 +20,13 @@ const App = () => {
       <Router history={history}>
         <Header history={history} setTheme={setTheme} theme={theme} />
         <Switch>
-          <Route path="/" exact component={Home}></Route>
+          <Route path="/" exact>
+            <Home theme={theme} />
+          </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
 };
-
 export default App;

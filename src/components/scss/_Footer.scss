@@ -1,0 +1,23 @@
+.Footer{
+  padding-block: var(--spacing);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+  .icon{
+    font-size: var(--fz-medium);
+
+    &:nth-child(2){
+      font-size: var(--fz-big);
+    }
+  }
+
+  svg{
+    color: var(--text-lc-color);
+
+    transition: color 150ms linear;
+    &:hover, &:active{
+      color: var(--text-main-color);
+    }
+  }
+}

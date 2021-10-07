@@ -1,0 +1,18 @@
+.Home {
+  .article--primary{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+
+    margin-bottom: var(--spacing);
+    font-size: var(--fz-medium);
+    letter-spacing: 1px;
+
+    .article__name{
+      font-size: var(--fz-big);
+    }
+  }
+  .article--secondary{
+    font-size: var(--fz-small);
+  }
+}

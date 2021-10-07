@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSun } from 'react-icons/fa';
+import Footer from './Footer';
 
 const paths = [
   { name: 'home', pathname: '/' },
@@ -40,7 +41,10 @@ const Header = ({ history, theme, setTheme }) => {
         <span className="orange-hi">logo</span>
       </Link>
       <nav className="nav">
-        <ul className={`nav__list ${isActive}`}>{renderNavList()}</ul>
+        <ul className={`nav__list ${isActive}`}>
+          {renderNavList()}
+          <Footer />
+        </ul>
         <button onClick={() => setActive(!active)} className="hamburger">
           <span className="hamburger__inner"></span>
         </button>

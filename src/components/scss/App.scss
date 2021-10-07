@@ -1,9 +1,11 @@
 @use 'resets';
 @use 'variables';
 @use 'Header';
+@use 'Home';
+@use 'Footer';
 
 .App{
-  min-height: 150vh; // TODO DELETE THIS
+  min-height: 100vh; // TODO DELETE THIS
 
   background-color: var(--background);
   font-family: var(--main-font);
@@ -28,7 +30,20 @@
   color: var(--highlight-clr);
 }
 
+.nadir{
+  color: var(--text-lc-color);
+}
+
 .active{
   visibility: visible;
   transform: scaleY(1);
+}
+
+.container{
+  width: min(90%, 1600px);
+  margin: 0 auto;
+}
+
+.indentation{
+  margin-left: 1em;
 }
