@@ -6,7 +6,8 @@
   display: flex;
   justify-content: space-between;
 
-  padding: var(--header-spacing);
+  margin-bottom: var(--spacing);
+  padding: var(--spacing);
   background-color: var(--elements-bg);
 
   box-shadow: var(--shadow);
@@ -34,14 +35,14 @@
     flex-direction: column;
     
     height: calc(100vh - 100%);
-    padding-bottom: var(--header-spacing);
+    padding-block: var(--spacing);
 
     background-color: var(--elements-bg);
 
     transform: scaleY(0);
     transform-origin: top;
 
-    transition: transform 150ms ease;
+    transition: visibility 200ms ease, transform 200ms ease;
 
     // hamburger transformation
     &.active +.hamburger .hamburger__inner{
@@ -58,7 +59,7 @@
   }
 
   &__item{
-    font-size: 2.5rem;
+    font-size: var(--fz-big);
     color: var(--text-lc-color);
 
     &.current{
@@ -79,7 +80,7 @@
       height: 2px;
       background-color: var(--text-main-color);
 
-      transition: transform 150ms ease, opacity 50ms linear;
+      transition: transform 250ms ease, opacity 50ms linear;
     }
 
     &__inner{

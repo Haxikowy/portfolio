@@ -2,7 +2,13 @@
   --main-font: 'Saira', sans-serif;
   --accent-font: 'Fira Code', monospace;
   
-  --header-spacing: 1.5em;
+  --spacing: 24px;
+  --spacing-small: 10px;
+
+  --fz-small: .875rem;
+  --fz-normal: 1.125rem;
+  --fz-medium: 1.5rem;
+  --fz-big: 2rem;
 
   .dark-theme {
     --background: hsl(0, 0%, 11%);
