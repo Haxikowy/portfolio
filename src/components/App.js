@@ -5,6 +5,7 @@ import history from '../history';
 import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
+import Work from './Work';
 
 const App = () => {
   const [theme, setTheme] = useState(false);
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/" exact>
             <Home theme={theme} />
           </Route>
+          <Route path="/work" exact component={Work} />
         </Switch>
         <Footer />
       </Router>

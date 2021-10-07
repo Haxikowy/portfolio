@@ -1,8 +1,12 @@
 @use 'resets';
 @use 'variables';
+@use 'icons';
 @use 'Header';
 @use 'Home';
 @use 'Footer';
+@use 'Slider';
+@use 'Work';
+@use 'WorkDescription';
 
 .App{
   min-height: 100vh; // TODO DELETE THIS
@@ -44,6 +48,36 @@
   margin: 0 auto;
 }
 
-.indentation{
-  margin-left: 1em;
+.button {
+  position: relative;
+  display: block;
+  padding: .25em .5em;
+  color: var(--text-lc-color);
+  font-family: var(--accent-font);
+  font-size: var(--fz-normal);
+  outline: 0;
+
+  transition: color 150ms linear;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+
+    background-color: var(--text-lc-color);
+    transform-origin: right;
+    transform: scaleX(0.08);
+
+    transition: transform 250ms ease;
+  }
+
+  &:hover, &:focus{
+    color: var(--text-main-color);
+
+    &::after{
+      transform: scaleX(1);
+    }
+  }
 }

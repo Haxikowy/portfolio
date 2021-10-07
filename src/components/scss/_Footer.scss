@@ -16,8 +16,8 @@
     color: var(--text-lc-color);
 
     transition: color 150ms linear;
-    &:hover, &:active{
-      color: var(--text-main-color);
-    }
+  }
+  a:hover svg, a:focus svg{
+    color: var(--text-main-color);
   }
 }

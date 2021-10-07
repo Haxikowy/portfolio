@@ -1,0 +1,30 @@
+.WorkDescription{
+  .work-title{
+    font-family: var(--accent-font);
+    font-weight: var(--weight-regular);
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .work-technologies{
+    display: flex;
+    gap: .25em;
+    padding: .25em;
+    border-radius: var(--border-radius);
+    background-color: var(--elements-bg);
+    font-size: var(--fz-medium);
+    color: hsl(18, 81%, 54%);
+  }
+
+  .work-buttons{
+    display: flex;
+    gap: .25em;
+  }
+
+  &>*{
+    margin-top: var(--spacing);
+  }
+}
