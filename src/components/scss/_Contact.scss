@@ -1,0 +1,28 @@
+.Contact{
+  .contact__title{
+    font-size: var(--fz-small);
+    font-family: var(--accent-font);
+    font-weight: var(--weight-regular);
+
+    margin-bottom: var(--spacing);
+  }
+
+  .contact__content{
+    font-size: var(--fz-normal);
+  }
+
+  .contact__info{
+    margin-bottom: var(--spacing);
+  }
+
+  .contact__detail--container{
+    .contact__detail{
+      display: block;
+      margin-left: var(--spacing-small);
+    }
+    &+.contact__detail--container{
+      margin-top: var(--spacing-small);
+    }
+  }
+  
+}

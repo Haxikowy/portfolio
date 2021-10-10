@@ -6,6 +6,8 @@ import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
 import Work from './Work';
+import About from './About';
+import Contact from './Contact';
 
 const App = () => {
   const [theme, setTheme] = useState(false);
@@ -24,7 +26,11 @@ const App = () => {
           <Route path="/" exact>
             <Home theme={theme} />
           </Route>
-          <Route path="/work" exact component={Work} />
+          <Route path="/work/:project" exact component={Work} />
+          <Route path="/about" exact>
+            <About theme={theme} />
+          </Route>
+          <Route path="/contact" exact component={Contact} />
         </Switch>
         <Footer />
       </Router>

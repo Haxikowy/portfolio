@@ -1,12 +1,15 @@
 @use 'resets';
 @use 'variables';
 @use 'icons';
+@use 'WorkDescription';
+@use 'Slider';
+@use 'Loader';
 @use 'Header';
 @use 'Home';
 @use 'Footer';
-@use 'Slider';
 @use 'Work';
-@use 'WorkDescription';
+@use 'About';
+@use 'Contact';
 
 .App{
   min-height: 100vh; // TODO DELETE THIS
@@ -18,10 +21,6 @@
   transition: background-color 150ms ease;
 }
 
-.red-hi{
-  color: var(--red);
-}
-
 .green-hi{
   color: var(--green);
 }
@@ -29,6 +28,7 @@
 .orange-hi{
   color: var(--orange);
 }
+
 
 .highlight{
   color: var(--highlight-clr);
@@ -54,7 +54,7 @@
   padding: .25em .5em;
   color: var(--text-lc-color);
   font-family: var(--accent-font);
-  font-size: var(--fz-normal);
+  font-size: var(--fz-normal-plus);
   outline: 0;
 
   transition: color 150ms linear;

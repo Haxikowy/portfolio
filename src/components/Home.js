@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import custom from '../codeTheme/custom';
-import darkTheme from '../codeTheme/darkTheme';
-import lightTheme from '../codeTheme/lightTheme';
+import custom from '../syntaxHighlighter/custom';
+import darkTheme from '../syntaxHighlighter/darkTheme';
+import lightTheme from '../syntaxHighlighter/lightTheme';
 
 const skills = `haxikowy.skills = {
   javascript: ['ES6+', 'React.js', 'Redux'],

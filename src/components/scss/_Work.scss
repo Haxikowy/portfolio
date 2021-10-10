@@ -1,2 +1,21 @@
 .Work{
+  .work__nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-small);
+
+    font-family: var(--accent-font);
+    color: var(--text-lc-color);
+
+    .nav__arrow{
+      outline: 0;
+      font-size: var(--fz-normal);
+
+      transition: color 150ms linear;
+
+      &:hover, &:focus {
+        color: var(--text-main-color)
+     }
+    }
+  }
 }
