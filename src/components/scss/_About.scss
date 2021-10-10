@@ -1,0 +1,32 @@
+.About{
+  .about__text{
+    font-size: var(--fz-normal);
+    margin-bottom: var(--spacing-small);
+  }
+  .about__resume{
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+    margin-left: auto;
+    margin-bottom: var(--spacing);
+
+    font-family: var(--accent-font);
+    font-size: var(--fz-small);
+    color: var(--text-lc-color);
+
+    transition: color 150ms linear;
+
+    .icon-download{
+      width: max-content;
+      margin-right: .25em;
+    }
+
+    &:hover, &:focus{
+      color: var(--text-main-color)
+    }
+  }
+  .about__code{
+    font-size: var(--fz-small);
+  }
+}

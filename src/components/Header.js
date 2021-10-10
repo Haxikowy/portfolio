@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 const paths = [
   { name: 'home', pathname: '/' },
-  { name: 'work', pathname: '/work' },
+  { name: 'work', pathname: '/work/0' },
   { name: 'about', pathname: '/about' },
   { name: 'contact', pathname: '/contact' },
 ];
@@ -26,7 +26,7 @@ const Header = ({ history, theme, setTheme }) => {
         <li
           key={i}
           className={`nav__item ${
-            history.location.pathname === path.pathname ? 'current' : ''
+            history.location.pathname.match(/\/\w+|\//).toString() === path.pathname.match(/\/\w+|\//).toString() ? 'current' : ''
           }`}>
           <Link to={path.pathname}>{path.name}</Link>
         </li>

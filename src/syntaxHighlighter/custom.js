@@ -4,6 +4,6 @@ custom.aliases = ['custom'];
 function custom(Prism) {
   Prism.languages.custom = Prism.languages.extend('javascript', {
     operator: /:|,|\.|=/g,
-    property: /skills/,
+    property: /skills|about/g,
   });
 }

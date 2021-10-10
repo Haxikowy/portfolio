@@ -146,7 +146,7 @@ var _default = {
     color: 'hsl(230, 8%, 24%)',
   },
   variable: {
-    color: '#9876aa',
+    color: 'hsl(230, 8%, 24%)',
   },
   string: {
     color: 'hsl(119, 34%, 47%)',
