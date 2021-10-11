@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {FaArrowLeft, FaArrowRight} from 'react-icons/fa'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 import Slider from './helperComponents/Slider';
 import WorkDescription from './helperComponents/WorkDescription';
@@ -8,6 +8,7 @@ import WorkData from '../data/WorkData';
 
 const Work = (props) => {
   const currentProject = parseInt(props.match.params.project, 10);
+
   if(!WorkData[currentProject]){
     return <>404</> //TODO
   }
@@ -21,12 +22,12 @@ const Work = (props) => {
   }
 
   return (
-    <div className="Work container">
-      <Slider data={WorkData[currentProject]} />
-      <WorkDescription data={WorkData[currentProject]} />
-      {renderNav()}
-    </div>
-  );
+  <div className="Work container">     
+    <Slider data={WorkData[currentProject]} />
+    <WorkDescription data={WorkData[currentProject]} />
+    {renderNav()}             
+  </div>
+  )
 };
 
 export default Work;

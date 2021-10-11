@@ -7,13 +7,28 @@ const Slider = ({data}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const {images, id} = data;
 
+  const nextSlide = useCallback(() => {
+    setCurrent(current >= images.length - 1 ? 0 : current + 1);
+  }, [current, images.length]);
+
   const prevSlide = () => {
     setCurrent(current === 0 ? images.length - 1 : current - 1);
   };
 
-  const nextSlide = useCallback(() => {
-    setCurrent(current >= images.length - 1 ? 0 : current + 1);
-  }, [current, images.length]);
+  useEffect(() => {
+    const slide = setTimeout(nextSlide, 5000);
+
+    return () => {
+      clearTimeout(slide);
+    };
+  }, [current, nextSlide]);
+
+  useEffect(() => {
+    return () => {
+      setIsLoaded(false)
+      setCurrent(0)
+    }
+  }, [id])
 
   const renderImages = () => {
     return images.map((image, index) => {
@@ -43,23 +58,7 @@ const Slider = ({data}) => {
       );
     })
   }
-
-  useEffect(() => {
-    const slide = setTimeout(nextSlide, 5000);
-
-    return () => {
-      clearTimeout(slide);
-    };
-  }, [current, nextSlide]);
-
-  useEffect(() => {
-    return () => {
-      setIsLoaded(false)
-      setCurrent(0)
-    }
-  }, [id])
-
-
+  
   return (
     <section className="Slider">
       <button className="left-arrow" onClick={prevSlide}>

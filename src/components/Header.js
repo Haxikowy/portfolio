@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSun } from 'react-icons/fa';
 import Footer from './Footer';
+import { __RouterContext } from 'react-router';
 
 const paths = [
   { name: 'home', pathname: '/' },
@@ -10,8 +11,10 @@ const paths = [
   { name: 'contact', pathname: '/contact' },
 ];
 
-const Header = ({ history, theme, setTheme }) => {
+const Header = ({ theme, setTheme }) => {
   const [active, setActive] = useState(false);
+
+  const { history } = useContext(__RouterContext)
 
   // hide navigation after changing path
   useEffect(() => {

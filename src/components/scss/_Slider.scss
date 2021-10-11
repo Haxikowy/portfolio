@@ -11,8 +11,10 @@
   .left-arrow,.right-arrow{
     width: max-content;
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     z-index: 1;
+    outline: 0;
 
     color: var(--text-lc-color);
     font-size: var(--fz-normal-plus);
@@ -28,10 +30,12 @@
     }
   }
   .left-arrow{
-    left: 3%;
+    left: 0;
+    padding-left: .5em;
   }
   .right-arrow{
-    right: 3%;
+    right: 0;
+    padding-right: .5em;
   }
 
   .image__container{

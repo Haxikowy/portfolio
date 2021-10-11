@@ -4,6 +4,8 @@
 @use 'WorkDescription';
 @use 'Slider';
 @use 'Loader';
+@use 'ContactForm';
+@use 'SendModal';
 @use 'Header';
 @use 'Home';
 @use 'Footer';
@@ -12,7 +14,8 @@
 @use 'Contact';
 
 .App{
-  min-height: 100vh; // TODO DELETE THIS
+  min-height: 100vh;
+  overflow: hidden;
 
   background-color: var(--background);
   font-family: var(--main-font);
@@ -24,11 +27,13 @@
 .green-hi{
   color: var(--green);
 }
+.red-hi{
+  color: var(--red)
+}
 
 .orange-hi{
   color: var(--orange);
 }
-
 
 .highlight{
   color: var(--highlight-clr);
@@ -68,7 +73,7 @@
 
     background-color: var(--text-lc-color);
     transform-origin: right;
-    transform: scaleX(0.08);
+    transform: scaleX(0.08159);
 
     transition: transform 250ms ease;
   }

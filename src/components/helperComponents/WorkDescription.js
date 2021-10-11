@@ -11,14 +11,14 @@ const WorkDescription = ({data}) => {
         <div className="work-buttons">
           <a
             className="button"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             href={linkCode}>
             code
           </a>
           <a
             className="button"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             href={linkLive}>
             live
