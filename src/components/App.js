@@ -1,7 +1,8 @@
 import './scss/App.scss';
-import React, { useState, useEffect } from 'react';
-import { Router, Switch, Route } from 'react-router';
-import history from '../history';
+import React, { useState, useEffect, useContext } from 'react';
+import { Switch, Route, __RouterContext } from 'react-router';
+import { useTransition, animated } from 'react-spring';
+
 import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
@@ -12,6 +13,14 @@ import Contact from './Contact';
 const App = () => {
   const [theme, setTheme] = useState(false);
 
+  const { location } = useContext(__RouterContext).history
+
+  const transition = useTransition(location.pathname, {
+    from: {position: 'absolute', opacity: 0, x: 400},
+    enter: {position: 'static', opacity: 1, x: 0},
+    leave: {position: 'absolute', opacity: 0, x: -400},
+  })
+
   useEffect(() => {
     setTheme(window.matchMedia('(prefers-color-scheme: light)').matches);
   }, []);
@@ -19,9 +28,9 @@ const App = () => {
   const currentTheme = theme ? 'light-theme' : 'dark-theme';
 
   return (
-    <div className={`App ${currentTheme}`}>
-      <Router history={history}>
-        <Header history={history} setTheme={setTheme} theme={theme} />
+    <div className={`App ${currentTheme}`}>      
+      <Header setTheme={setTheme} theme={theme} />
+      {transition((style) => (<animated.div style={style}>   
         <Switch>
           <Route path="/" exact>
             <Home theme={theme} />
@@ -31,9 +40,10 @@ const App = () => {
             <About theme={theme} />
           </Route>
           <Route path="/contact" exact component={Contact} />
-        </Switch>
-        <Footer />
-      </Router>
+        </Switch>   
+      </animated.div>)
+      )}
+      <Footer />
     </div>
   );
 };

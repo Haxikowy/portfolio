@@ -1,3 +1,4 @@
+import React from 'react';
 import { FaJs, FaCss3, FaHtml5, FaSass, FaReact } from 'react-icons/fa';
 import {SiRedux} from 'react-icons/si'
 

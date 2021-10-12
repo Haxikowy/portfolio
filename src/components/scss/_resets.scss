@@ -26,3 +26,16 @@ svg, img{
 ul {
   list-style: none;
 }
+
+input, textarea{
+  width: 100%;
+  border: none;
+  background-color: var(--background);
+  color: var(--text-main-color);
+  font-size: var(--fz-normal);
+  font-family: var(--main-font);
+}
+
+label{
+  display: block;
+}
