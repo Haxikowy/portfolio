@@ -40,7 +40,7 @@ const Header = ({ setTheme }) => {
     }
     // render mobile navigation
     return (
-      <animated.ul style={{...fold, visibility: fold.transform.to(o => o === 0.1 ? 'hidden' : 'visible') }} className="nav__list">
+      <animated.ul style={{...fold, visibility: fold.transform.to(o => o === 0.1 ? 'hidden' : 'visible') }} className={`nav__list ${active ? 'active' : ''}`}>
       {paths.map((path, i) => {
       return (
         <li

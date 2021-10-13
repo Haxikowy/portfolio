@@ -11,9 +11,9 @@
     .nav__arrow{
       outline: 0;
       font-size: var(--fz-normal);
-
+      
       transition: color 150ms linear;
-
+      
       &:hover, &:focus {
         color: var(--text-main-color)
      }
