@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { animated } from 'react-spring';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import custom from '../syntaxHighlighter/custom';
 import darkTheme from '../syntaxHighlighter/darkTheme';
@@ -19,11 +19,11 @@ const skills = `haxikowy.skills = {
 
 SyntaxHighlighter.registerLanguage('custom', custom);
 
-const Home = ({ theme }) => {
+const Home = ({ style, theme }) => {
   const codeTheme = theme ? lightTheme : darkTheme;
 
   return (
-    <main className="Home container">
+    <animated.main style={style} className="Home container">
       <article className="article article--primary">
         <p className="article__nickname nadir">haxikowy</p>
         <h1 className="article__name highlight">Szymon Dolnik</h1>
@@ -34,7 +34,7 @@ const Home = ({ theme }) => {
           {skills}
         </SyntaxHighlighter>
       </article>
-    </main>
+    </animated.main>
   );
 };
 

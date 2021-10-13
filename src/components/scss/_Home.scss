@@ -1,4 +1,11 @@
 .Home {
+  min-height: 65vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-big);
+  justify-content: space-between;
+
   .article--primary{
     display: flex;
     flex-direction: column;
@@ -10,10 +17,17 @@
 
     .article__name{
       font-size: var(--fz-big);
+      font-weight: var(--weight-normal);
     }
   }
   .article--secondary{
     max-width: max-content;
     font-size: var(--fz-small);
+  }
+}
+
+@media(min-width: 1100px){
+  .Home{
+    flex-direction: row-reverse;
   }
 }

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import ContactForm from './helperComponents/ContactForm'
 import SendModal from './helperComponents/SendModal';
-import {useTransition} from 'react-spring'
+import {useTransition, animated} from 'react-spring'
 
-const Contact = () => {
+const Contact = ({style}) => {
   const [status, setStatus] = useState(0);
   const [show, setShow] = useState(false);
 
@@ -20,7 +20,7 @@ const Contact = () => {
   }, [status])
 
   return (
-    <main className="Contact container">
+    <animated.main style={style} className="Contact container">
       <h1 className="contact__title">haxikowy<span className="highlight">.</span><span className="green-hi">contact</span>()</h1>
       <article className="contact__content">
         <div className="contact__info">
@@ -31,8 +31,8 @@ const Contact = () => {
         </div>
         <ContactForm setStatus={setStatus} />
       </article>
-        {transition((style, item) => item ? <SendModal style={style} setShow={setShow} status={status} /> : '')}
-    </main>
+        {transition((style, item) => item ? <SendModal style={style} setShow={setShow} status={parseInt(status, 10)} /> : '')}
+    </animated.main>
   )
 }
 
