@@ -18,13 +18,14 @@ button{
   cursor: pointer;
 }
 
-svg, img{
+img{
+  display: block;
   width: 100%;
 }
 
 svg{
-  display: inline-block;
-  vertical-align:middle;
+  display: block;
+  margin: 0 auto;
 }
 
 ul {
