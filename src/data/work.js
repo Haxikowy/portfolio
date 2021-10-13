@@ -2,7 +2,7 @@ import React from 'react';
 import { FaJs, FaCss3, FaHtml5, FaSass, FaReact } from 'react-icons/fa';
 import {SiRedux} from 'react-icons/si'
 
-const WorkData = [
+export const work = [
 {
   id: '0',
   title: 'countries',
@@ -75,8 +75,8 @@ const WorkData = [
     `Tetris game with points system from NES version. Game works also on mobile. Points are stored at local storage. Game isn't using any framework just vanilla JavaScript. Game engine is written in one object. Most challenging was part with collision system and block rotation. I've done some animation on line clear, also game is speeding up after every 10 lines you clear. Before starting game you can change your level, as level progresses you earn more points.`,
   technologies: [
     <FaJs className="js" key={0} />,
-    <FaHtml5 className="css" key={1} />,
-    <FaCss3 className="html" key={2} />,
+    <FaHtml5 className="html" key={1} />,
+    <FaCss3 className="css" key={2} />,
   ],
   linkCode: 'https://github.com/Haxikowy/tetris',
   linkLive: 'https://haxikowy.github.io/tetris/',
@@ -113,8 +113,8 @@ const WorkData = [
     `Vanilla JavaScript calculator. You can switch between three different themes, and it detects whether dark or light you want to use(by your browser settings). Final solution is slightly different than the design(it's another solution to Frontend Mentor challenge), but I wanted to give this project something "mine". I really like the last theme it's a bit unusual, so it get's me.`,
   technologies: [
     <FaJs className="js" key={0} />,
-    <FaHtml5 className="css" key={1} />,
-    <FaCss3 className="html" key={2} />,
+    <FaHtml5 className="html" key={1} />,
+    <FaCss3 className="css" key={2} />,
   ],
   linkCode: 'https://github.com/Haxikowy/fem-calculator-app',
   linkLive: 'https://haxikowy.github.io/fem-calculator-app',
@@ -154,5 +154,3 @@ const WorkData = [
     alt: 'Calculator app on mobile - alt colors mode with sample input',
   }]
 }]
-
-export default WorkData;

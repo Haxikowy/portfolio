@@ -52,3 +52,18 @@
     6px 12px 12px hsl(0deg 0% 92% / 10%);
   }
 }
+
+@media (min-width: 700px){
+  :root{
+    --spacing-small: 20px;
+    --spacing: 48px;
+    --spacing-big: 56px;
+  
+    --fz-small: 1.125rem;
+    --fz-normal: 1.25rem;
+    --fz-normal-plus: 1.5rem;
+    --fz-medium-small: 1.75rem;
+    --fz-medium: 2.75rem;
+    --fz-big: 3.25rem;
+  }
+}

@@ -21,3 +21,9 @@
     color: var(--text-main-color);
   }
 }
+
+@media(min-width: 700px){
+  .Footer{
+    gap: 1em;
+  }
+}

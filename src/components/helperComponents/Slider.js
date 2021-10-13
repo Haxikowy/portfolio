@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+
 import Loader from './Loader';
 
 const Slider = ({data}) => {
@@ -16,7 +17,7 @@ const Slider = ({data}) => {
   };
 
   useEffect(() => {
-    const slide = setTimeout(nextSlide, 5000);
+    const slide = setTimeout(nextSlide, 6000);
 
     return () => {
       clearTimeout(slide);
@@ -64,7 +65,6 @@ const Slider = ({data}) => {
       <button className="left-arrow" onClick={prevSlide}>
         <FaArrowAltCircleLeft />
       </button>
-
       <button className="right-arrow" onClick={nextSlide}>
         <FaArrowAltCircleRight />
       </button>

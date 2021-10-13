@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
 import emailjs from 'emailjs-com'
-import {service_id,template_id, user_id} from '../api'
+import { service_id, template_id, user_id } from '../../api'
 
 const ContactForm = (props) => {
   const [name, setName] = useState('');

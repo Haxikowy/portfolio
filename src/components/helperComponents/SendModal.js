@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import {FaCheck} from 'react-icons/fa'
 import {ImCross} from 'react-icons/im'
-import { animated } from '@react-spring/web'
+import { animated } from 'react-spring'
 
-const SendModal = (props) => {
-  const status = parseInt(props.status, 10)
-  const {setShow} = props;
-
+const SendModal = ({style, status, setShow}) => {
   useEffect(() => {
     const show = setTimeout(() => {
       setShow(prev => !prev)
@@ -33,7 +30,7 @@ const SendModal = (props) => {
 
 
   return (
-    <animated.div style={props.style} className="modal__container">
+    <animated.div style={style} className="modal__container">
       <div className="modal">
         {renderText()}
       </div>
