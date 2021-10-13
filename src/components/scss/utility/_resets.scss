@@ -19,8 +19,12 @@ button{
 }
 
 svg, img{
-  display: block;
   width: 100%;
+}
+
+svg{
+  display: inline-block;
+  vertical-align:middle;
 }
 
 ul {
