@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import { FaSun } from 'react-icons/fa';
 
 import Footer from './Footer';
-import {paths} from './../data/paths'
+import { paths } from './../data/paths'
 
 const Header = ({ setTheme }) => {
   const [active, setActive] = useState(false);
